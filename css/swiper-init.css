@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "khat";
+    src: url('fonts/Shekari.woff2') format('woff2'),
+        url('fonts/Shekari.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "bala";
+    src: url('fonts/bala.woff2') format('woff2'),
+        url('fonts/bala.woff') format('woff');
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiperCoverflow .swiper-slide img {
+    filter: blur(3px) grayscale(0.9);
+    transition: 1s;
+}
+
+.mySwiperCoverflow .swiper-slide.swiper-slide-next img {
+    filter: blur(0) grayscale(0) !important;
+    transition: 1s;
+}
+
+.slides {
+    background: url("../images/background.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.heading {
+   font-family: "khat";
+   font-size: 3rem;
+   text-align: center;
+}
+
+@media (min-width:768px) {
+    .heading {
+          font-family: "khat";
+          font-size: 8rem;
+          line-height: 6rem;
+          text-align: center;
+    }
+}

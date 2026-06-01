@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "khat";
+    src: url('fonts/Shekari.woff2') format('woff2'),
+        url('fonts/Shekari.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "bala";
+    src: url('fonts/bala.woff2') format('woff2'),
+        url('fonts/bala.woff') format('woff');
+    font-display: swap;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.mobile-header {
+    display: block;
+    padding: 1rem;
+}
+.header-btn{
+    background-color: white;
+    border: 1px solid black;
+    padding: .41rem .51rem 0.9rem;
+    font-weight: 100;
+    border-radius: 10px;
+}
+header.scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    animation: menuscroll 1s;
+    transform: translate(0,0);
+    background-color: #ffffff9e;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    box-shadow: 1px 1px 10px #0000006b;
+}
+header.scroll>div>a:first-child{
+    width: 12% !important;    
+}
+/* swiper */
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiperCoverflow .swiper-slide img {
+    filter: blur(3px) grayscale(0.9);
+    transition: 1s;
+}
+
+.mySwiperCoverflow .swiper-slide.swiper-slide-next img {
+    filter: blur(0) grayscale(0) !important;
+    transition: 1s;
+}
+
+.slides {
+    background: url("../images/background.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.heading {
+   font-family: "khat";
+   font-size: 3rem;
+   text-align: center;
+}
+
+@keyframes menuscroll {
+    from{
+        transform: translate(0,-10rem);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+@media(min-width:768px) {
+        .heading {
+          font-family: "khat";
+          font-size: 8rem;
+          line-height: 6rem;
+          text-align: center;
+    }
+    .mobile-header {
+        display: none;
+    }
+    .desktop-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .desktop-header div:first-child{
+        width: 5%;
+    }
+    .desktop-header.scroll div:first-child{
+        width: 3%;
+    }
+}

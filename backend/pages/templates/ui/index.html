@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block bodyclass %}frontpage{% endblock %}
+
+{% block content %}
+<div class="slides">
+    <div class="swiper mySwiperCoverflow">
+        <div class="swiper-wrapper">
+            {% for portfolio in portfolios %}
+             <div class="swiper-slide">
+                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}">
+             </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<h1>{{ message }}</h1>
+{% endblock %}
