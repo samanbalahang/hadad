@@ -14,14 +14,26 @@
     </div>
 </header>
 <header class="desktop-header">
-    <div>
+    <div class="hidden md:block w-25 md:w-35">
         <a href="{% url 'home' %}">
-            <img src="{% static 'images/logo-black.png' %}" alt="Logo" >
+            <img src="{% static 'images/logo-black.png' %}" alt="Logo">
         </a>
     </div>
     <nav>
-        <a href="/">Home</a>
-        <a href="/some/">Posts</a>
+        <ul class="block md:flex gap-4 items-center">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="#maria">mariahadad</a>
+            </li>
+            <li>
+                <a href="#potfolios">potfolios</a>
+            </li>
+            <li>
+                <a href="#contactme">contactme</a>
+            </li>
+        </ul>
     </nav>
     <div>
         <a href="tel:09224194485" class="header-btn">

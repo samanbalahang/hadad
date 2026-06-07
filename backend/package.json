@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/cli": "^4.3.0",
-    "tailwindcss": "^4.3.0"
+    "aos": "^2.3.4",
+    "tailwindcss": "^4.3.0",
+    "typed.js": "^3.0.0"
   }
 }

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'helloworld',
     'pages',
     'portfolios',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [

@@ -2,8 +2,11 @@ window.addEventListener("DOMContentLoaded", () => {
     let scrolly;
     let updown = 0;
     let position;
-    let headers = document.querySelectorAll("header");
+    let desktop_header = document.querySelector(".desktop-header");
+    let mobile_header = document.querySelector(".mobile-header");
     let mySwiperCoverflow = document.querySelector(".mySwiperCoverflow");
+    let newportfolios = document.getElementById("newportfolios");
+    let bars = document.getElementById("bars");
     window.addEventListener("scroll", () => {
         scrolly = window.scrollY;
         if (scrolly > 100) {
@@ -14,23 +17,23 @@ window.addEventListener("DOMContentLoaded", () => {
             }
             updown = scrolly;
             if (position == "up") {
-                if (headers.length > 0) {
-                    headers.forEach(header => {
-                        header.classList.add("scroll")
-                    });
+                if (desktop_header) {
+                    desktop_header.classList.add("scroll")
                 }
             } else {
-                if (headers.length > 0) {
-                    headers.forEach(header => {
-                        header.classList.remove("scroll");
-                    });
+                if (desktop_header) {
+                    desktop_header.classList.remove("scroll");
                 }
             }
+            if (mobile_header) {
+                mobile_header.classList.add("scroll")
+            }
         } else {
-            if (headers.length > 0) {
-                headers.forEach(header => {
-                    header.classList.remove("scroll");
-                });
+            if (desktop_header) {
+                desktop_header.classList.remove("scroll");
+            }
+            if (mobile_header) {
+                mobile_header.classList.remove("scroll")
             }
         }
     });
@@ -39,7 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: false,
-            slidesPerView: 3,
+            slidesPerView: 1,
             coverflowEffect: {
                 rotate: 50,
                 stretch: 0,
@@ -51,10 +54,34 @@ window.addEventListener("DOMContentLoaded", () => {
                 delay: 2500,
                 disableOnInteraction: false,
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
             // pagination: {
             //     el: ".mySwiperCoverflow-pagination",
             // },
         });
     }
+    if (newportfolios) {
+        let string = newportfolios.innerText;
 
+        var typed = new Typed('#newportfolios', {
+            strings: [string],
+            typeSpeed: 50,
+            loop: true,
+        });
+    }
+    if(bars){
+        bars.addEventListener("click",()=>{
+            desktop_header.classList.toggle("open");
+        })
+    }
+    AOS.init();
 });
