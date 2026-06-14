@@ -1,0 +1,24 @@
+{
+  "name": "hadad",
+  "version": "1.0.0",
+  "description": "A dynamic web platform showcasing the private oil painting gallery of Mrs. Hadad, located in Karaj, Iran. This project leverages Django for robust backend management and modern frontend libraries for a premium, interactive visual experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samanbalahang/hadad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samanbalahang/hadad/issues"
+  },
+  "homepage": "https://github.com/samanbalahang/hadad#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}
